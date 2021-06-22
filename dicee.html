@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+
+  </head>
+  <body>
+<script>src="index.js"</script>
+
+    <div class="container">
+      <h1>Refresh Me</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img id="xx" class="img1" src="images/dice6.png">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img id="x" class="img2" src="images/dice6.png">
+      </div>
+
+    </div>
+
+    <script>
+      var randomNumber1  = Math.random();
+        randomNumber1 = Math.floor(randomNumber1 * 6);
+        
+        if (randomNumber1 === 1) {
+            document.getElementById("x").src="images/dice1.png"; 
+        } else if (randomNumber1 === 2) { 
+            document.getElementById("x").src="images/dice2.png"; 
+        } else if (randomNumber1 === 3) {
+            document.getElementById("x").src="images/dice3.png"; 
+        } else if (randomNumber1 === 4) {
+          document.getElementById("x").src="images/dice4.png"; 
+        } else if (randomNumber1 === 5) {
+          document.getElementById("x").src="images/dice5.png"; 
+        } else if (randomNumber1 === 6) {
+          document.getElementById("x").src="images/dice6.png"; 
+        }
+
+        </script>
+            <script>
+              var randomNumber2  = Math.random();
+                randomNumber2 = Math.floor(randomNumber2 * 6);
+                
+                if (randomNumber2 === 1) {
+                    document.getElementById("xx").src="images/dice1.png"; 
+                } else if (randomNumber2 === 2) { 
+                    document.getElementById("xx").src="images/dice2.png"; 
+                } else if (randomNumber2 === 3) {
+                    document.getElementById("xx").src="images/dice3.png"; 
+                } else if (randomNumber2 === 4) {
+                  document.getElementById("xx").src="images/dice4.png"; 
+                } else if (randomNumber2 === 5) {
+                  document.getElementById("xx").src="images/dice5.png"; 
+                } else if (randomNumber2 === 6) {
+                  document.getElementById("xx").src="images/dice6.png"; 
+                }
+        
+                </script>
+
+                <script>
+                  if (randomNumber2 > randomNumber1) {
+                    document.querySelector("h1").innerHTML = ("Player 1 Wins!");
+                  } else if (randomNumber2 < randomNumber1) {
+                    document.querySelector("h1").innerHTML = ("Player 2 Wins!");
+                  } else if (randomNumber2 === randomNumber1) {
+                    document.querySelector("h1").innerHTML = ("Draw!");
+                  }
+                 </script>
+  </body>
+
+  <footer>
+    www 🎲 App Brewery 🎲 com
+  </footer>
+</html>
